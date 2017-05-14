@@ -1,0 +1,130 @@
+\documentclass[a4paper,titlepage,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[OT1]{fontenc}
+\usepackage{polski}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,decorations.markings,math,arrows.meta}
+\usepackage{rotating}
+\usepackage[percent]{overpic}
+\usepackage[cp1250]{inputenc}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.groupplots}
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage{siunitx}
+\usepackage[section]{placeins}
+
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+
+\definecolor{szary}{rgb}{0.95,0.95,0.95}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+
+%konfiguracje pakietu listings
+\lstset{
+	backgroundcolor=\color{szary},
+	frame=single,
+	breaklines=true,
+}
+\lstdefinestyle{customlatex}{
+	basicstyle=\footnotesize\ttfamily,
+	%basicstyle=\small\ttfamily,
+}
+\lstdefinestyle{customc}{
+	breaklines=true,
+	frame=tb,
+	language=C,
+	xleftmargin=0pt,
+	showstringspaces=false,
+	basicstyle=\small\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+\lstdefinestyle{custommatlab}{
+	captionpos=t,
+	breaklines=true,
+	frame=tb,
+	xleftmargin=0pt,
+	language=matlab,
+	showstringspaces=false,
+	%basicstyle=\footnotesize\ttfamily,
+	basicstyle=\scriptsize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+
+%wymiar tekstu (bez Å¼ywej paginy)
+\textwidth 160mm \textheight 247mm
+
+%ustawienia pakietu pgfplots
+\pgfplotsset{
+	tick label style={font=\scriptsize},
+	label style={font=\small},
+	legend style={font=\small},
+	title style={font=\small}
+}
+
+\def\figurename{Rys.}
+\def\tablename{Tab.}
+
+%konfiguracja liczby pÅ‚ywajÄ…cych elementÃ³w
+\setcounter{topnumber}{0}%2
+\setcounter{bottomnumber}{3}%1
+\setcounter{totalnumber}{5}%3
+\renewcommand{\textfraction}{0.01}%0.2
+\renewcommand{\topfraction}{0.95}%0.7
+\renewcommand{\bottomfraction}{0.95}%0.3
+\renewcommand{\floatpagefraction}{0.35}%0.5
+
+\pagestyle{fancy}
+\lhead{{\textsf{Dokumentacja \\ Projektowa}}}
+%\lhead{}\textbf
+%\rhead{}
+\cfoot{\textbf{\textsf{\thepage}}}
+\setlength{\parindent}{1cm}
+\setcounter{secnumdepth}{4}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\resizebox{!}{1.5cm}{\bf Cloud Factory}\\
+\resizebox{!}{1.5cm}{\bf Studio}\\
+\end{center}
+\vspace{3cm}
+\begin{center}
+{\bf \resizebox{!}{0.8cm}{Dokumentacja projektowa} \vskip 0.1cm}
+\end{center}
+\vspace{3cm}
+\begin{center}
+{\bf \Huge Aplikacja Analizuj¹ca Stan Fizyczny U¿ytkownika \\ \vskip 0.5cm \resizebox{!}{1.5cm}{Health Together} \vskip 0.1cm}
+\end{center}
+\vspace{4cm}
+\begin{center}
+{\Large{\bf Autorzy:} \\ \large Gie³dowski Daniel \\ \large Kuc Piotr \\ \large Ró¿añski Antoni \\ \large Œwierczek Arkadiusz  \par}
+\end{center}
+\vspace*{\stretch{6}}
+\begin{center}
+\bf{\large{Warszawa, 2017\vskip 0.1cm}}
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\input{wstep}
+\input{zakres}
+\input{organizacja}
+\input{Procedury_kontroli_i_sterowania}
+\end{document}
+
+
